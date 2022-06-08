@@ -12,6 +12,7 @@ function verificaUsuario(usuario) {
 }
 
 async function verificaSenha(senha, senhaHash) {
+  console.log(senha, senhaHash)
   const senhaValida = await bcrypt.compare(senha, senhaHash)
   if (!senhaValida) {
     throw new InvalidArgumentError('E-mail ou senha inválidos')
