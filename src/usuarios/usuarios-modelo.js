@@ -54,7 +54,7 @@ class Usuario {
       return null;
     }
     
-    return new Usuario(usuario);
+    return usuario;
   }
 
   static lista() {
