@@ -9,7 +9,7 @@ module.exports = app => {
 
   app
     .route('/usuario/:id')
-    .delete(usuariosControlador.deleta);
+    .delete(passport.authenticate('bearer', { session: false }), usuariosControlador.deleta);
 
   app
     .route('/usuario/login')
