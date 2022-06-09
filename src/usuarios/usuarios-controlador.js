@@ -6,7 +6,7 @@ function criaTokenJWT(usuario) {
   const payload = {
     id: usuario.id
   }
-  return jwt.sign(payload, 'senha-secreta123')
+  return jwt.sign(payload, process.env.CHAVE_JWT)
 }
 module.exports = {
   adiciona: async (req, res) => {
